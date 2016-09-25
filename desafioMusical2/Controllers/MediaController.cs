@@ -12,7 +12,7 @@ namespace desafioMusical2.Controllers
 {
     public class MediaController : Controller
     {
-        private MediaDBContext db = new MediaDBContext();
+        private MediaDBContext db = new MediaDBContext();      
 
         // GET: Media
         public ActionResult Index()
@@ -20,6 +20,78 @@ namespace desafioMusical2.Controllers
             return View(db.Medias.ToList());
         }
 
+        public ActionResult Contextual(string titulo, string categoria, string descricao, string autoria)
+        {
+            var tituloLst = new List<string>();     //Listas para os campos de string que receberam as opcoes para 
+            var AutoriaLst = new List<string>();    //o display da dropdown lista
+            var CategoriaLst = new List<string>();
+            var DescricaoLst = new List<string>();
+
+            var DescricaoQry = from d in db.Medias     //Armazenando as possibilidades de valores por campo(copluna)
+                            orderby d.Descricao        //(ainda com repeticao)
+                            select d.Descricao;
+
+            var AutoriaQry = from d in db.Medias
+                           orderby d.Autoria
+                           select d.Autoria;
+
+            var categoriaQry = from d in db.Medias
+                               orderby d.Categoria
+                               select d.Categoria;
+
+            var tituloQry = from d in db.Medias
+                               orderby d.Titulo
+                               select d.Titulo;
+
+
+            tituloLst.AddRange(tituloQry.Distinct());    //Populando as listas criadas com valores nao repetidos
+            AutoriaLst.AddRange(AutoriaQry.Distinct());
+            CategoriaLst.AddRange(categoriaQry.Distinct());
+            DescricaoLst.AddRange(DescricaoQry.Distinct());
+
+            ViewBag.descricao = new SelectList(DescricaoLst);    //Passando as informacoes da ultima lista para o view Contextual
+            ViewBag.autoria = new SelectList(AutoriaLst);       //e crinado lista de selecao para dropdownl lista
+            ViewBag.categoria = new SelectList(CategoriaLst);
+            ViewBag.titulo = new SelectList(tituloLst);
+
+            var medias = from m in db.Medias       //A selecao propriamente dita
+                         select m;
+
+            if (!string.IsNullOrEmpty(descricao))      //Checa se foi dada alguma opcao
+            {
+                medias = medias.Where(x => x.Descricao == descricao);  //compara com o parametro passado p control atraves da view
+            }
+
+            if (!string.IsNullOrEmpty(autoria))
+            {
+                medias = medias.Where(x => x.Autoria == autoria);
+            }
+
+            if (!string.IsNullOrEmpty(categoria))
+            {
+                medias = medias.Where(x => x.Categoria == categoria);
+
+            }
+            if (!string.IsNullOrEmpty(titulo))
+            {
+                medias = medias.Where(x => x.Titulo == titulo);
+
+            }
+
+
+
+            return View(medias);
+        }
+    
+        public ActionResult Nominal()
+        {
+            return View(db.Medias.ToList());
+        }
+
+       
+           
+
+   
         // GET: Media/Details/5
         public ActionResult Details(int? id)
         {

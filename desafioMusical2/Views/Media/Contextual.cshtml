@@ -1,0 +1,91 @@
+﻿@model IEnumerable<MusicalChallenge.Models.Media>
+    <!--Objetos model para exibir a tabela ja filtardos pelo controller -->
+
+
+
+    @{
+        ViewBag.Title = "Contextual Search";
+    }
+
+    
+    @{
+        Layout = "~/Views/Shared/_Layout2.cshtml";  <!--Layout com barra lateral de pesquisa especificado no render section Button-->
+    }
+
+    @section Button{
+
+    @using (Html.BeginForm("Index", "Media", FormMethod.Get))
+    {
+        <div class="navbar-fixed-botton form-inline">
+            <p>
+                <legend> Contextual Search</legend>
+                <ul class="left navbar-fixed-top">
+                    <li> <stong>Descricao:</stong> @Html.DropDownList("genero", "All")</li>
+                    <li><stong>Autoria:</stong> @Html.DropDownList("autor", "All")</li>
+                    <li> <stong>Categoria:</stong> @Html.DropDownList("categoria", "All")</li>
+                    <li> <stong>Codigo:</stong> @Html.DropDownList("categoria", "All")</li>
+                    <li> <stong>Codigo:</stong> @Html.DropDownList("categoria", "All")</li>
+                    <input type="submit" value="Filter" />
+                </ul>
+            </p>
+        </div>
+
+    }
+
+        <h2>Contextual</h2>
+                                                                           <!--Tabela ja filtrada-->
+                      <p>
+                          @Html.ActionLink("Create New", "Create")
+                      </p>
+                      <table class="table">
+                          <tr>
+                              <th>
+                                  @Html.DisplayNameFor(model => model.Codigo)
+                              </th>
+                              <th>
+                                  @Html.DisplayNameFor(model => model.Titulo)
+                              </th>
+                              <th>
+                                  @Html.DisplayNameFor(model => model.Categoria)
+                              </th>
+                              <th>
+                                  @Html.DisplayNameFor(model => model.Data)
+                              </th>
+                              <th>
+                                  @Html.DisplayNameFor(model => model.Descricao)
+                              </th>
+                              <th>
+                                  @Html.DisplayNameFor(model => model.Autoria)
+                              </th>
+                              <th></th>
+                          </tr>
+
+                          @foreach (var item in Model)
+                          {
+                              <tr>
+                                  <td>
+                                      @Html.DisplayFor(modelItem => item.Codigo)
+                                  </td>
+                                  <td>
+                                      @Html.DisplayFor(modelItem => item.Titulo)
+                                  </td>
+                                  <td>
+                                      @Html.DisplayFor(modelItem => item.Categoria)
+                                  </td>
+                                  <td>
+                                      @Html.DisplayFor(modelItem => item.Data)
+                                  </td>
+                                  <td>
+                                      @Html.DisplayFor(modelItem => item.Descricao)
+                                  </td>
+                                  <td>
+                                      @Html.DisplayFor(modelItem => item.Autoria)
+                                  </td>
+                                  <td>
+                                      @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                                      @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                                      @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                                  </td>
+                              </tr>
+
+                      </table>
