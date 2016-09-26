@@ -3,29 +3,36 @@
 }
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1 class="align-center"> <img src="~/Content/spotify-icon-26.png" width="110 height="110" /> MVC Musical Challenge</h1>
+    <p> Biblioteca de CD/DVD/Livro! Alem de adicionar e excluir itens, você pode procura-los por cada campo 
+     ou ordenalos de acordo com suas varias categorias! Confira:
+    </p>
+    
 </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Whatever tag!</h2>
+        <h4>Search Context</h4> 
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            Procure seus itens de acordo com cada campo: Categoria (Livro, CD, DVD), Descricao(Rock,Suspense,..), Autoria ou pelos proprios Titulos:
+         </p>
+        <h4>Aproveite a oportunidade para editar ou remover algum item</h4>
+                
+        <p>@Html.ActionLink("Search Context", "Contextual", "Media")</p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Small Google </h2>
+        <h4>Search Name</h4> 
+        <p> Procure seus itens por partes do nomes nos campos: Categoria(Livro, CD, DVD), Descricao(Rock,Suspense,..), Autoria, ID , Titulo ou ainda ano!
+          </p>
+        <h4>Aproveite a oportunidade para editar ou remover algum item</h4>
+        <p>@Html.ActionLink("Search Name", "Nominal", "Media")</p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Add Whatever!</h2>
+        <h4>Create Item</h4> 
+        <p>Voce pode facilmente adicionar novos titulos e obra para a colecao:</p>
+        <p>@Html.ActionLink("Create Item", "Create", "Media")</p>
     </div>
 </div>

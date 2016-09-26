@@ -82,16 +82,30 @@ namespace desafioMusical2.Controllers
 
             return View(medias);
         }
-    
-        public ActionResult Nominal()
+
+        public ActionResult Nominal(string pattern)
         {
-            return View(db.Medias.ToList());
+            var medias = from m in db.Medias
+                         select m;
+
+            if (!String.IsNullOrEmpty(pattern))
+            {
+                medias = medias.Where(s => s.Titulo.Contains(pattern)
+                                              || s.Descricao.Contains(pattern)
+                                              || s.Codigo.ToString().Contains(pattern)
+                                              || s.Autoria.Contains(pattern)
+                                              || s.Data.ToString().Contains(pattern)
+                                              || s.Categoria.Contains(pattern)
+                );
+            }
+
+            return View(medias);
         }
 
-       
-           
 
-   
+
+
+
         // GET: Media/Details/5
         public ActionResult Details(int? id)
         {

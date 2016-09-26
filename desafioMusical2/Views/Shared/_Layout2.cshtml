@@ -21,13 +21,19 @@
                                 <span class="icon-bar"></span>
                             </button>
                         </div>
+                        <img src="~/Content/Spotify-icon.jpg" width="45" height="45" />
+                        @Html.ActionLink("Spotted", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                         <div class="navbar navbar-inverse navbar-fixed-top">
                             <ul class="nav navbar-nav">
-                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>   <!--Links para as paginas do site-->
                                 <li>@Html.ActionLink("About", "About", "Home")</li>
                                 <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                                <li>@Html.ActionLink("Search", "Index", "Media")</li>
-                                <li>@Html.ActionLink("Create", "Create", "Media") </li>
+                                <li>
+                                    @Html.ActionLink("Search Context", "Contextual", "Media")
+                                </li>
+                                <li>@Html.ActionLink("Search Name", "Nominal", "Media")</li>
+                                <li>@Html.ActionLink("Create", "Create", "Media")</li>
+                                <li>@Html.ActionLink("Index", "Index", "Media")</li>
                             </ul>
                         </div>
                     </div>
@@ -46,7 +52,7 @@
     </div>
     <hr />
     <footer>
-        <p>&copy; @DateTime.Now.Year - Musical Challenge</p>
+        <p>&copy; @DateTime.Now.Year -My MVC Musical Challenge</p>
     </footer>
 
     @Scripts.Render("~/bundles/jquery")

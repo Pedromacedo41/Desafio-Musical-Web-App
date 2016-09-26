@@ -14,23 +14,27 @@
 
     @section Button{
 
-    @using (Html.BeginForm("Index", "Media", FormMethod.Get))
+    @using (Html.BeginForm("Contextual", "Media", FormMethod.Get))
     {
-        <div class="navbar-fixed-botton form-inline">
-            <p>
+        <div class="form-group">
+           
                 <legend> Contextual Search</legend>
-                <ul class="left navbar-fixed-top">
-                    <li> <stong>Descricao:</stong> @Html.DropDownList("genero", "All")</li>
-                    <li><stong>Autoria:</stong> @Html.DropDownList("autor", "All")</li>
+                <ul>
+                    <li> <stong>Descricao:</stong> @Html.DropDownList("descricao", "All")</li>
+                    <li><stong>Autoria:</stong> @Html.DropDownList("autoria", "All")</li>
                     <li> <stong>Categoria:</stong> @Html.DropDownList("categoria", "All")</li>
-                    <li> <stong>Codigo:</stong> @Html.DropDownList("categoria", "All")</li>
-                    <li> <stong>Codigo:</stong> @Html.DropDownList("categoria", "All")</li>
-                    <input type="submit" value="Filter" />
+                    <li> <stong>Titulo:</stong> @Html.DropDownList("titulo", "All")</li>
                 </ul>
-            </p>
+                <input type="submit" value="Filter" />
+            
         </div>
 
     }
+        }
+    <br />
+    <br />
+    <br />
+    <br />
 
         <h2>Contextual</h2>
                                                                            <!--Tabela ja filtrada-->
@@ -87,5 +91,5 @@
                                       @Html.ActionLink("Delete", "Delete", new { id = item.ID })
                                   </td>
                               </tr>
-
+                          }
                       </table>

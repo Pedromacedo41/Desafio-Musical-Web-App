@@ -11,9 +11,25 @@
         Layout = "~/Views/Shared/_Layout2.cshtml"; <!--Layout com barra lateral de pesquisa especificado no rendersection button-->
     }
 
+                      @section Button{
 
+                          @using (Html.BeginForm("Nominal", "Media", FormMethod.Get))
+                          {
+                              <div class="container">
 
+                                  <legend>Search name</legend>
+                                   <strong>Pattern:</strong> @Html.TextBox("pattern")
+                                  
+                                  <input type="submit" value="Filter" />
+                              </div>
 
+                          }
+                      }
+
+                      <br />
+                      <br />
+                      <br />
+                      <br />
 
     <h3>Nominal</h3>
                       <!--Tabela ja filtrada-->
@@ -70,6 +86,6 @@
                                       @Html.ActionLink("Delete", "Delete", new { id = item.ID })
                                   </td>
                               </tr>
-                        
+                          }
 
                       </table>
