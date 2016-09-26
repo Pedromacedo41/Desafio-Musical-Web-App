@@ -1,5 +1,6 @@
 # desafioMusical2
 Web App de organizacao basica de bilblioteca de midia usando banco de dados local LocalDB
+O banco de dados sql foi posteriormente  foi migrado para o servico em nuvem da azure
 
 A pagina home da aplicacao apresenta as funcionalidades do aplicativo web  e os redirecionamentos principais do site!
 
