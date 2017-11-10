@@ -9,7 +9,7 @@ A pagina home da aplicacao apresenta as funcionalidades do aplicativo web  e os 
 
   ### Models Set: 
   
-   *Media: Contem a classe que define as colunas do banco de dados e contexto (usando Entitity Framework and Code First) 
+   Media: Contem a classe que define as colunas do banco de dados e contexto (usando Entitity Framework and Code First) 
  
   ### Views Set:
   
