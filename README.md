@@ -1,4 +1,4 @@
-# Web-App-Desafio-Musical-To-Publish
+# Web-App Desafio Musical (To Publish)
 
 Web App de organizacao basica de bilblioteca de midia usando banco de dados local LocalDB criada com Visual Studio.
 O banco de dados SQL foi posteriormente  foi migrado para o servico em nuvem da Microsoft Azure
