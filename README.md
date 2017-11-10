@@ -9,18 +9,18 @@ A pagina home da aplicacao apresenta as funcionalidades do aplicativo web  e os 
 
   ### Models Sets: 
   
-   -Media: Contem a classe que define as colunas do banco de dados e contexto (usando EF) 
+   -Media: Contem a classe que define as colunas do banco de dados e contexto (usando Entitity Framework and Code First) 
  
   ### Views Sets:
   
-   -Home/About/Create/Index - usando o layout basico e seu renderBody
-   -Context/Nominal - usando o segundo layout com os campos de pesquisa e seus metodos get definos nas views em campos Rebder Section
+   -Home/About/Create/Index: layout principal + campo renderBody 
+   -Context/Nominal: layout secundário, campos de pesquisa e seus metodos get definos nas views em campos Render Section
    
   ### Controller Sets:
  
-   -Media Controller: tem todos os metodos dos views e dos formularios de Context/Nominal -camps de pesquisa, alem dos de edicao, criacao
+   -Media Controller: Contém todos os metodos dos views e dos formularios de Context/Nominal -camps de pesquisa, alem dos de edicao, criacao
    -Home Controller: Controla as paginas principal de informacoes (Home/About/Contact)
    
-## Status Atual : 
+## Status Atual da Aplicação: 
    
    -Fora do ar
