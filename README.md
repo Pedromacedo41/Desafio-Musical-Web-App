@@ -21,6 +21,7 @@ A pagina home da aplicacao apresenta as funcionalidades do aplicativo web  e os 
    -Media Controller: Contém todos os metodos dos views e dos formularios de Context/Nominal -camps de pesquisa, alem dos de edicao, criacao
    -Home Controller: Controla as paginas principal de informacoes (Home/About/Contact)
    
-## _Status Atual da Aplicação:_ 
+
+_Status Atual da Aplicação:_ 
    
    -Fora do ar
