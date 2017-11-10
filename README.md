@@ -1,7 +1,7 @@
 # Web-App-Desafio-Musical-To-Publish
 
-Web App de organizacao basica de bilblioteca de midia usando banco de dados local LocalDB criada com Visual Studio
-O banco de dados sql foi posteriormente  foi migrado para o servico em nuvem da Microsoft Azure
+Web App de organizacao basica de bilblioteca de midia usando banco de dados local LocalDB criada com Visual Studio.
+O banco de dados SQL foi posteriormente  foi migrado para o servico em nuvem da Microsoft Azure
 
 A pagina home da aplicacao apresenta as funcionalidades do aplicativo web  e os redirecionamentos principais do site!
 
@@ -21,6 +21,6 @@ A pagina home da aplicacao apresenta as funcionalidades do aplicativo web  e os 
    -Media Controller: Contém todos os metodos dos views e dos formularios de Context/Nominal -camps de pesquisa, alem dos de edicao, criacao
    -Home Controller: Controla as paginas principal de informacoes (Home/About/Contact)
    
-## Status Atual da Aplicação: 
+## _Status Atual da Aplicação:_ 
    
    -Fora do ar
