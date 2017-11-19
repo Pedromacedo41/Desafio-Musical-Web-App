@@ -1,4 +1,4 @@
-# Desafio-Musical-Web-App-deprecate-
+# Desafio-Musical-Web-App
 
 Visual Studio C# Web App with Database integration (SQL Server) to implement a musical librarie using Localdb and after publish through MS Azure Webservers. Nawadays, the site is offline 
 
@@ -23,4 +23,4 @@ The home page presents the web site functionalities and the site menu navigation
 
 # _Nowadays Status:_ 
    
-   -Offline. However, the website can be imported to VS enviroment and has its SGBD setted through the edition the context settings lines on the configurating file.
+   -Offline. However, the website can be imported to VS enviroment and has its SGBD setted through the edition the context settings lines on the configurating file web.config
