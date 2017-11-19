@@ -1,27 +1,26 @@
-# Web-App Desafio Musical (To Publish)
+# Desafio-Musical-Web-App-deprecate-
 
-Web App de organizacao basica de bilblioteca de midia usando banco de dados local LocalDB criada com Visual Studio.
-O banco de dados SQL foi posteriormente  foi migrado para o servico em nuvem da Microsoft Azure
+Visual Studio C# Web App with Database integration (SQL Server) to implement a musical librarie using Localdb and after publish through MS Azure Webservers. Nawadays, the site is offline 
 
-A pagina home da aplicacao apresenta as funcionalidades do aplicativo web  e os redirecionamentos principais do site!
+The home page presents the web site functionalities and the site menu navigation
 
-## Sumario da aplicacao MVC
+## Folders Table of Contents ( MVC pattern)
 
   ### Models Set: 
   
-   Media: Contem a classe que define as colunas do banco de dados e contexto (usando Entitity Framework and Code First) 
- 
-  ### Views Set:
-  
-   -Home/About/Create/Index: layout principal + campo renderBody 
-   -Context/Nominal: layout secundário, campos de pesquisa e seus metodos get definos nas views em campos Render Section
+   Media: Contains the model class wich difines the database columms and set up the context (Using Entity Framework and Code First paradigm)
    
-  ### Controller Set:
+  ### Views Set: (cshtml files, html with .ASP technology)
+  
+   -Home/About/Create/Index: Primary website layout  + different renderBodys sections (ASP) to each page 
+   -Context/Nominal: Secondary layout, Search Fields and get/ post methods imput define on Render Section (ASP)
+   
+  ### Controllers Set:
  
-   -Media Controller: Contém todos os metodos dos views e dos formularios de Context/Nominal -camps de pesquisa, alem dos de edicao, criacao
-   -Home Controller: Controla as paginas principal de informacoes (Home/About/Contact)
+   -Media Controller: Contains the methods get, update, post implementation of the forms of some views. 
+   -Home Controller: Controller for the static pages (Home/About/Contact)
    
 
-_Status Atual da Aplicação:_ 
+_Nowadays Status:_ 
    
-   -Fora do ar
+   -Offline. However, the website can be imported to VS enviroment and has its SGBD setted through the edition the context settings lines on the configurating file.
