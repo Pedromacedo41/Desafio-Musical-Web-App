@@ -21,6 +21,6 @@ The home page presents the web site functionalities and the site menu navigation
    -Home Controller: Controller for the static pages (Home/About/Contact)
    
 
-_Nowadays Status:_ 
+# _Nowadays Status:_ 
    
    -Offline. However, the website can be imported to VS enviroment and has its SGBD setted through the edition the context settings lines on the configurating file.
